@@ -1,15 +1,29 @@
 import React from 'react';
 import Request from './request'
 
-function Menu() {
-    return (
-        <div className="Menu">
-            <p>Menu</p>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>Request</li>
-            <Request />
-        </div>
-    )
+class Menu extends React.Component {
+
+    state = {
+        info: ""
+    }
+
+    componentWillMount() {
+        fetch("http://localhost:3001/")
+        .then(resp => resp.json())
+        .then(json => this.setState({ info: json}))
+    }
+
+    render() {
+        return (
+            <div className="Menu">
+                <p>Menu</p>
+                <li>Profile</li>
+                <li>Messages</li>
+                <li>Request</li>
+                <Request />
+            </div>
+        )
+    }
 }
+
 export default Menu

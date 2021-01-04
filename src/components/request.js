@@ -7,6 +7,7 @@ function Request () {
             <input type="text"></input>
             <p>Search for specific medication</p>
             <input type="text"></input>
+            <button type="submit">Search</button>
         </div>
     )
 }
