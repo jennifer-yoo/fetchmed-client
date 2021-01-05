@@ -20,7 +20,7 @@ class Menu extends React.Component {
                 <li>Profile</li>
                 <li>Messages</li>
                 <li>Request</li>
-                <Request />
+                <Request info={this.state.info}/>
             </div>
         )
     }
