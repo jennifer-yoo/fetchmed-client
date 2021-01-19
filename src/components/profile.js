@@ -1,25 +1,29 @@
 import React from 'react';
-import 
-class Menu extends React.Component {
+import Medlist from './medlist.js'
+
+class Profile extends React.Component {
 
     state = {
         info: ""
     }
     
-    componentWillMount() {
-        fetch("http://localhost:3001/")
+    componentDidMount() {
+        fetch("http://localhost:3001/api/v1/orders")
         .then(resp => resp.json())
-        .then(json => this.setState({ info: json}))
+        .then(data => {
+            this.setState({ info: json})
+        })
     }
     
     render() {
         return (
             <div className="Profile">
                 <p>My Orders</p>
+                <Medlist orders={this.state.info} />
                 <p>User Info</p>
             </div>
         )
     }
 }
 
-export default Menu
+export default Profile
