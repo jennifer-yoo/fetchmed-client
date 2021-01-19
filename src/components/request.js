@@ -1,5 +1,5 @@
 import React from 'react';
-import RequestList from './requestlist'
+import RequestList from '../containers/requestlist'
 
 class Request extends React.Component {
 

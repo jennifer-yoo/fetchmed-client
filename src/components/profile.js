@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 
 class Menu extends React.Component {
 
     state = {
@@ -11,7 +11,7 @@ class Menu extends React.Component {
         .then(resp => resp.json())
         .then(json => this.setState({ info: json}))
     }
-        
+    
     render() {
         return (
             <div className="Profile">
@@ -22,4 +22,4 @@ class Menu extends React.Component {
     }
 }
 
-export default Profile
+export default Menu
